@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styling/theme.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" spacing="12.0" stylesheets="@../styling/menubar.css">
+         <children>
+            <RadioButton fx:id="wishlistsRadioButon" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" selected="true" text="WISHLISTS">
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="menuRadioButtonsGroup" />
+               </toggleGroup>
+               <graphic>
+                  <FontIcon iconLiteral="far-grin-hearts" />
+               </graphic>
+            </RadioButton>
+            <RadioButton fx:id="itemsRadioButton" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" text="ITEMS" toggleGroup="$menuRadioButtonsGroup">
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
+               <graphic>
+                  <FontIcon iconLiteral="fas-cubes" />
+               </graphic>
+            </RadioButton>
+            <RadioButton fx:id="friendsRadioButton" layoutX="111.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" text="FRIENDS" toggleGroup="$menuRadioButtonsGroup">
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
+               <graphic>
+                  <FontIcon iconLiteral="fas-users" />
+               </graphic>
+            </RadioButton>
+            <HBox maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" spacing="2.0">
+               <children>
+                  <Hyperlink maxHeight="1.7976931348623157E308" onAction="#signOut" text="Sign out" />
+                  <RadioButton fx:id="profileRadioButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" text="PROFILE" toggleGroup="$menuRadioButtonsGroup">
+                     <padding>
+                        <Insets bottom="6.0" right="6.0" top="6.0" />
+                     </padding>
+                     <graphic>
+                        <FontIcon iconLiteral="fas-user-circle" />
+                     </graphic>
+                  </RadioButton>
+                  <Button fx:id="notificationsButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                     <graphic>
+                        <FontIcon iconLiteral="fas-bell" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="6.0" right="6.0" />
+         </padding>
+      </HBox>
+      <StackPane fx:id="contentStackpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <children>
+            <BorderPane fx:id="wishlistsPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+               <top>
+                  <Label fx:id="wishlistsHeaderLabel" alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" style="-fx-font-size: 3em;" text="Wishlists" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontIcon iconLiteral="far-grin-hearts" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+               </top>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+               <center>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox>
+                           <children>
+                              <VBox fx:id="wishlistActionsBox" spacing="6.0">
+                                 <children>
+                                    <Label text="Select wishlist owner" />
+                                    <HBox spacing="6.0">
+                                       <children>
+                                          <ComboBox fx:id="wishlistOwnerCombobox" prefWidth="150.0" />
+                                          <Button fx:id="addWishlistButton" layoutX="167.0" layoutY="10.0" mnemonicParsing="false" onAction="#createWishlist" styleClass="add-button" text="Add Wishlist">
+                                             <graphic>
+                                                <FontIcon />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="BOTTOM_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="addGiftButton" mnemonicParsing="false" onAction="#createGift" styleClass="add-button" text="Add Item">
+                                       <graphic>
+                                          <FontIcon />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ListView fx:id="wishlistsListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ListView fx:id="giftItemsListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="itemsPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ListView fx:id="allGiftItemsListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </center>
+               <top>
+                  <Label alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" style="-fx-font-size: 3em;" text="Items" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontIcon iconLiteral="fas-cubes" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+               </top>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </BorderPane>
+            <BorderPane fx:id="friendsPane" prefHeight="400.0" prefWidth="600.0" visible="false">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ListView fx:id="friendsListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </center>
+               <top>
+                  <Label alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" style="-fx-font-size: 3em;" text="Friends" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontIcon iconLiteral="fas-users" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+               </top>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </BorderPane>
+            <BorderPane fx:id="profilePane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+               <center>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" spacing="24.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox spacing="6.0">
+                           <children>
+                              <Label text="Name" />
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="profileNameLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold; -fx-font-size: 1.2em;" text="John Doe" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="editProfileNameButton" mnemonicParsing="false" styleClass="edit-button">
+                                       <graphic>
+                                          <FontIcon />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox spacing="12.0">
+                           <children>
+                              <VBox spacing="6.0">
+                                 <children>
+                                    <Label text="Current Password" />
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <StackPane HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="shownPasswordLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" />
+                                                <PasswordField fx:id="currentPasswordField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-insets: 0; -fx-background-color: transparent; -fx-padding: 0;" text="aaa" />
+                                             </children>
+                                          </StackPane>
+                                          <HBox alignment="CENTER" spacing="2.0">
+                                             <children>
+                                                <ToggleButton fx:id="showPasswordToggleButton" mnemonicParsing="false" styleClass="show-toggle-button">
+                                                   <graphic>
+                                                      <FontIcon />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Button fx:id="editPasswordButton" mnemonicParsing="false" styleClass="edit-button">
+                                                   <graphic>
+                                                      <FontIcon />
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="24.0" />
+                           </padding>
+                        </VBox>
+                        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#deleteProfile" prefHeight="40.0" styleClass="error-label" text="Delete this account" />
+                     </children>
+                     <padding>
+                        <Insets left="48.0" right="48.0" top="48.0" />
+                     </padding>
+                  </VBox>
+               </center>
+               <top>
+                  <Label fx:id="profileHeaderLabel" alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" style="-fx-font-size: 3em;" text="Profile" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontIcon iconLiteral="fas-user-circle" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+               </top>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

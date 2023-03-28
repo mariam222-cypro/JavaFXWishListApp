@@ -1,0 +1,9 @@
+mariam/wishlist/core/model/Contribution.class
+mariam/wishlist/core/model/Guy.class
+mariam/wishlist/core/model/Friend.class
+mariam/wishlist/core/model/FriendRequest.class
+mariam/wishlist/core/model/Item.class
+mariam/wishlist/core/model/Wishlist.class
+mariam/wishlist/core/model/Gift.class
+mariam/wishlist/core/model/FriendRequest$Status.class
+mariam/wishlist/core/model/Admin.class
