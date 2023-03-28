@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+
+<HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" spacing="6.0" stylesheets="@../styling/theme.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="nameLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" text="hiram kamau" HBox.hgrow="ALWAYS">
+         <graphic>
+            <FontIcon iconLiteral="far-user-circle" iconSize="24" />
+         </graphic>
+      </Label>
+      <Hyperlink fx:id="requestActionsLink" maxHeight="1.7976931348623157E308" text="Send friend request" />
+   </children>
+   <padding>
+      <Insets left="6.0" right="6.0" />
+   </padding>
+</HBox>
