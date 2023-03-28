@@ -1,0 +1,8 @@
+mariam/wishlist/server/crud/GiftCrudTest.class
+mariam/wishlist/server/crud/WishlistCrudTest.class
+mariam/wishlist/server/crud/AdminCrudTest.class
+mariam/wishlist/server/crud/FriendCrudTest.class
+mariam/wishlist/server/crud/ItemCrudTest.class
+mariam/wishlist/server/crud/ContributionCrudTest.class
+mariam/wishlist/server/crud/FriendRequestCrudTest.class
+mariam/wishlist/server/ServerTest.class

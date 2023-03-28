@@ -1,0 +1,99 @@
+.root {
+    -fx-base: white;
+    -fx-accent: #1bae8d;
+}
+
+.error-label {
+    -fx-text-fill: red;
+}
+
+.sign-in-border-pane {
+    -fx-border-color: #1bae8d;
+    -fx-border-radius: 24px;
+    -fx-pref-width: 500px;
+    -fx-pref-height: 500px;
+    -fx-min-width: 500px;
+    -fx-min-height: 500px;
+    -fx-max-width: 500px;
+    -fx-max-height: 500px;
+    -fx-padding: 24px;
+}
+
+.sign-in-pane {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 300px;
+    -fx-min-width: 300px;
+    -fx-min-height: 300px;
+    -fx-max-width: 300px;
+    -fx-max-height: 300px;
+    -fx-padding: 24px;
+}
+
+.sign-in-header-label {
+    -fx-font-size: 1.5em;
+}
+
+.edit-button,
+.delete-button,
+.show-toggle-button {
+    -fx-background-radius: 24px;
+    -fx-padding: 6px;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+}
+
+.add-button > .ikonli-font-icon,
+.edit-button > .ikonli-font-icon,
+.delete-button > .ikonli-font-icon,
+.show-toggle-button > .ikonli-font-icon {
+    -fx-icon-size: 16px;
+}
+
+.start-button,
+.stop-button {
+}
+
+.start-button > .ikonli-font-icon {
+    -fx-icon-code: fas-play;
+    -fx-icon-color: green;
+}
+
+.stop-button > .ikonli-font-icon {
+    -fx-icon-code: fas-stop;
+    -fx-icon-color: red;
+}
+
+.start-stop-toggle-button > .ikonli-font-icon {
+    -fx-icon-code: fas-play;
+    -fx-icon-color: green;
+    -fx-icon-size: 24px;
+}
+
+.start-stop-toggle-button:selected > .ikonli-font-icon {
+    -fx-icon-code: fas-stop;
+    -fx-icon-color: red;
+}
+
+.add-button > .ikonli-font-icon {
+    -fx-icon-code: fas-plus;
+}
+
+.edit-button > .ikonli-font-icon {
+    -fx-icon-code: fas-pen;
+}
+
+.delete-button > .ikonli-font-icon {
+    -fx-icon-code: fas-trash-alt;
+}
+
+.show-toggle-button > .ikonli-font-icon {
+    -fx-icon-code: far-eye;
+}
+
+.show-toggle-button:selected > .ikonli-font-icon {
+    -fx-icon-code: far-eye-slash;
+}
